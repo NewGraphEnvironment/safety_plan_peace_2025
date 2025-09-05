@@ -8,8 +8,8 @@ output:
 links-to-footnotes: false
 paged-footnotes: false
 params:
-  repo_url: 'https://github.com/lucy-schick/safety_plan_peace_2025'
-  report_url: 'https://lucy-schick.github.io/safety_plan_peace_2025/'
+  repo_url: 'https://github.com/NewGraphEnvironment/safety_plan_peace_2025'
+  report_url: 'https://NewGraphEnvironment.github.io/safety_plan_peace_2025/'
   job_name: '2025-077-sern-peace-fish-passage'
   gis_project_name: "sern_peace_fwcp_2023"
   update_packages: FALSE
@@ -72,6 +72,7 @@ link_fieldmaps <- 'https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip
 ## NEED TO UPDATE ACCOMODATIONS
 hotel1 <- "3396 Rosia Road, Prince George, BC V2K 4Y5"
 hotel2 <- "3990 Larisa Court, Prince George, BC V2K 0B1"
+hotel3 <- "Mackenzie (sep 21 - 23) 27 McIntyre Drive Mackenzie, BC V0J 2C0 "
 
 vehicle1 <- '2013 Toyota Tundra black w/flatdeck and yellow can-am quad'
 vehicle2 <- '2006 Pontiac Vibe red'
@@ -133,13 +134,17 @@ Field activities will be completed with support from crews from McLeod Lake Indi
 
 Al Irvine  
 Vehicle:  `r vehicle1`  
-Accommodation: `r hotel1`  
+Accommodation:  
+`r hotel1`  
+`r hotel3` 
 
 <br>
 
 Lucy Schick     
 Vehicle:  `r vehicle2`  
-Accommodation: `r hotel2  `
+Accommodation:  
+`r hotel2`  
+`r hotel3` 
 
 
 <br>
@@ -155,8 +160,9 @@ crew_ids <- c('airvine',
               'lschick', 
               'jisadore',
               # 'tsalonas',
-              'bprince',
-              'jdemont')
+              'bprince'
+              # 'jdemont'
+              )
 
 tab_crew <- projects |>  
   purrr::pluck('crew_contacts') |>  
